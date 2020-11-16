@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Appointments;
 
 class HomeController extends Controller
 {
@@ -18,26 +18,14 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the user dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        if (Auth::user()) {
-            if (Auth::user()->is_admin) {
-                $this->adminHome();
-            } elseif (Auth::user()->is_physician && Auth::user()->approved) {
-                $this->physicianHome();
-            } elseif (Auth::user()->approved) {
-                return view('home');
-            } else {
-                Auth::logout();
-                return redirect()->route('/');
-            }
-        } else {
-            return redirect()->route('login');
-        }
+        $appointments = Appointments::where('status', 1)->orderBy('created_at', 'desc')->get();
+        return view('home', ['appointments' => $appointments]);
     }
     /**
     * Show the Admin dashboard.
@@ -52,11 +40,14 @@ class HomeController extends Controller
         return view('admin-home', [ 'users' => $users]);
     }
 
+    /**
+     * Show the physician dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function physicianHome()
     {
-        $users = User::where('is_admin', 0)
-        ->orderBy('created_at', 'desc')
-        ->get();
-        return view('physician-home', [ 'users' => $users]);
+        $appointments = Appointments::where('status', 1)->orderBy('created_at', 'desc')->get();
+        return view('physician-home', [ 'appointments' => $appointments]);
     }
 }
