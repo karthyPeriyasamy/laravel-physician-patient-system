@@ -63,7 +63,7 @@
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ url('/register/user')}}">{{ __('Register') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/register/physician') }}">Physician

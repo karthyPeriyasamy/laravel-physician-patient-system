@@ -21,8 +21,10 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/register/user', [RegisterController::class, 'showUserRegisterForm']);
 Route::get('/register/physician', [RegisterController::class,'showPhysicianRegisterForm']);
 
+Route::post('/register/user', [RegisterController::class, 'createUser']);
 Route::post('/register/physician', [RegisterController::class,'createPhysician']);
 
 Route::group(['middleware' => ['admin']], function () {

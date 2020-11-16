@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Specialists;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,10 +24,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $specialists = Specialists::where('status', 1)
-                ->orderBy('name', 'asc')
-                ->get();
-        return view('home', ['specialists' => $specialists]);
+        if (Auth::user()) {
+            if (Auth::user()->is_admin) {
+                $this->adminHome();
+            } elseif (Auth::user()->is_physician && Auth::user()->approved) {
+                $this->physicianHome();
+            } elseif (Auth::user()->approved) {
+                return view('home');
+            } else {
+                Auth::logout();
+                return redirect()->route('/');
+            }
+        } else {
+            return redirect()->route('login');
+        }
     }
     /**
     * Show the Admin dashboard.

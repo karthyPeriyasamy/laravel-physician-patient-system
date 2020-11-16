@@ -57,6 +57,13 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
+    /**
+    * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+    */
+    public function showUserRegisterForm()
+    {
+        return view('auth.register', ['url' => 'user']);
+    }
 
     /**
     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -72,17 +79,19 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  Request  $request
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function createUser(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'address' => $data['address'],
-            'password' => Hash::make($data['password']),
+        $this->validator($request->all())->validate();
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'address' => $request->address,
+            'password' => Hash::make($request->password),
         ]);
+        return redirect()->intended('login');
     }
     /**
      * Handle the admin registration request
