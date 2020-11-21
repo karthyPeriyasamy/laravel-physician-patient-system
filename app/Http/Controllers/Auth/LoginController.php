@@ -42,8 +42,8 @@ class LoginController extends Controller
     /**
      * login
      *
-     * @param  mixed $request
-     * @return void
+     * @param  Request $request
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function login(Request $request)
     {

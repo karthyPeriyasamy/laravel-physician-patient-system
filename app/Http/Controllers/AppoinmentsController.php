@@ -29,6 +29,5 @@ class AppointmentsController extends Controller
             'specialist' => $data['specialist'],
             'description' => $data['description'],
         ]);
-        return redirect()->intended('login');
     }
 }
