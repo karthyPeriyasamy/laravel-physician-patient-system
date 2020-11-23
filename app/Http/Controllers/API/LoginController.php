@@ -17,12 +17,12 @@ class LoginController extends BaseController
         ]);
 
         if ($validator->fails()) {
-            return $this->errorResponse($validator->errors(), Config::get('constants.api.error.login.validation'));
+            return $this->errorResponse(Config::get('constants.api.error.login.validation'), $validator->errors());
         }
         if (auth()->attempt(['email'=>$request->email, 'password'=>$request->password])) {
             $user = auth()->user();
             if ($user->approved === 0) {
-                return $this->errorResponse([], Config::get('constants.api.error.login.approved'));
+                return $this->errorResponse(Config::get('constants.api.error.login.approved'));
             }
 
             $adminRole = $user->is_admin;

@@ -53,7 +53,7 @@ class RegisterController extends BaseController
     {
         $validator = $this->validator($request->all());
         if ($validator->fails()) {
-            return $this->errorResponse($validator->errors(), Config::get('constants.api.error.register.validation'));
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors());
         }
         $user = User::create([
             'name' => $request->name,
@@ -76,11 +76,11 @@ class RegisterController extends BaseController
     {
         $validator = $this->physicianValidator($request->all());
         if ($validator->fails()) {
-            return $this->errorResponse($validator->errors(), Config::get('constants.api.error.register.validation'));
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors());
         }
         $specialists = Specialists::whereIn('id', $request->specialists);
         if ($specialists->count() !== count($request->specialists)) {
-            return $this->errorResponse($specialists, Config::get('constants.api.error.register.validation'));
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $specialists);
         }
         $user = User::create([
             'name' => $request->name,

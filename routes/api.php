@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Config;
 use App\Http\Controllers\API\SpecialistController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LoginController;
@@ -40,5 +40,16 @@ Route::group(['prefix' => 'v1'], function () {
                 Route::put('approve', [UserController::class, 'approved']);
             });
         });
+
+        Route::middleware(['scope:physician'])->group(function () {
+            Route::group(['prefix' => 'physician'], function () {
+                Route::put('specialist', [SpecialistController::class, 'addToPhysician']);
+                Route::delete('specialist', [SpecialistController::class, 'removeFromPhysician']);
+            });
+        });
     });
+});
+Route::fallback(function () {
+    return response()->json([
+        'message' => Config::get('constants.api.page_not_found')], 404);
 });

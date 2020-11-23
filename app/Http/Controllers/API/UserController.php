@@ -35,14 +35,14 @@ class UserController extends BaseController
         ]);
 
         if ($validator->fails()) {
-            return $this->errorResponse($validator->errors(), Config::get('constants.api.error.user.approved_validation'));
+            return $this->errorResponse(Config::get('constants.api.error.user.approved_validation'), $validator->errors());
         }
         $approved = $request->approved ? 1 : 0;
-        $user = User::where('id', $request->userId)
+        $user = User::where('id', $request->user_id)
         ->where('is_admin', 0)
         ->update(['approved' => $approved]);
         if (!$user) {
-            return $this->errorResponse($validator->errors(), Config::get('constants.api.error.user.approved'));
+            return $this->errorResponse(Config::get('constants.api.error.user.approved'));
         }
         return $this->successResponse($user, Config::get('constants.api.success.user.approved'));
     }

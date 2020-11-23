@@ -8,6 +8,7 @@ return [
        'limit' => 10,
        'secret' => 'PhysicianPatient',
        'date_format' => 'd/m/Y',
+       'page_not_found' => 'Page not found',
        'no_data_found' => 'No data found',
        'error' => [
            'login' => [
@@ -25,6 +26,8 @@ return [
                 'validation' => 'Specialist required params validation error',
                 'create' => 'Specialists created failure!',
                 'update' => 'Specialists updated failure!',
+                'exists' => 'Specialist already exists',
+                'not_exists' => 'Specialist not exists'
             ]
        ],
        'success' => [
