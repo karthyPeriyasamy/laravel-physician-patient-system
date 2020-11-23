@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"raw": "{\n    \"email\": \"physician@gmail.com\",\n    \"password\": \"12345678\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,7 +220,7 @@
 							{
 								"key": "Authorization",
 								"type": "text",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMmNkN2YyODMxNGY0OWU1OWFkYjMwZWI2ZTI0ZjUxMjhjZjY5OTM3M2RlZjhjMDJjMjQzNGMxODQyOWYzYzk5NjhiMjRkZTYxMzRhN2MyZmEiLCJpYXQiOjE2MDU5NTM5OTAsIm5iZiI6MTYwNTk1Mzk5MCwiZXhwIjoxNjM3NDg5OTkwLCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.B4abpsiz7aS8nxp0aWyNvmQf4Yu9L7C9EwrNWGFqZdceRSLbboYauDt6KjtuCqXmYQuJut58sNS2x47AQg41aNlYRoAHiyJqvFunHlHpYJMaRbxDpqSH6klIMz7qFQL2djymnwPwo8iCsNTz1hcSs6LeKkhVaqX0RQNHZjMWBmG6N7TvAlO7c7ulB5Ti-G--pVTz-Fu5oKHjI4g2-Eal9musaJu8K8Hi2N65bQAVABNIlJ6QMh-tnygLhbrP4hFatOD3ZWTSlGIiA2bJt_7f0VxHAgHu5_SRv0clT83FatZxw_6m_Fyx7dSYGclVCAfRkEh4X8qmfrl6no9kmAFgIDhczdYgV4VE6yQQGHqAgCuboFFK-7UxxrUnm_vHBkjjiWyQneU3p1bbEAo9JUDelVkLxgoK0GHQylJ7lgkqRsU9inOnZmFsEkFuEzI-Vk-CEaEiS9Zaub1q51u5od5sFY9jTOajUGxSCwZirjD0p_e97U4BarHKPH87CGLtWhxqRDEcBpk5OURyP4sea7_X8U4svTiFzeMjpFn1XqmLpM_I6ywdoIOoqkQo2-P0Bms3GG-BIP9-sn5bDlurwpj4TNFb67eZ31ryvNwCj-E4hHY7x8pFNLzFpThno2J0sRRypCvQVeC0U9azjh3PDThRpsGfwkaDx2_VooVg9Ajh_2M"
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYmY1Zjc0ZmM2YjVhNDE1NDRiOTc1YzNlZDcwMTIxMTViNTU0OWE5MmU2MjYwYTk5MGZkYWM0YThkZTIyODNiNjYyYjhhYjk0YTUyMmMwYzciLCJpYXQiOjE2MDYwOTQ4NzAsIm5iZiI6MTYwNjA5NDg3MCwiZXhwIjoxNjM3NjMwODcwLCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.ofx0IiL_C1cAy1EKLA7l1dpY_FrfRC2b0Kuf8JXkHYZrDwcL3ebX4t9iJzpQ-wWAPP8f_PnR6OWO_p3_qig9IhW_vBNp9zmIMtNa8aRZzaRlwfoXHPSeUqHNOQti7BcOe3JEhgN5zvtmmNVarUBhmy3_dJHRCRlEt68PFFiXc4B9lgpw7IsSYHb6Cod3G2QfxGZd6H2G4ZQ5brb-shkUqMiyV0Csy5HdyYPSh3bOXFl_fCrSWVJ_Aof53t43pKPr-JWh_qvjdcZ8VkQuAIQd8aI2Uf8JzmOZQPtIxjFVU5Ety5XTE7ol0rPAO5XFHeAZyZAvrhf4fkyOt7a9jWDKmJk87wkYZpsxI2zCpWZUOfdf_JoEZHMm4Rj4tRogxX8Bve0hndHSTG4jPd7fM8tmjIDZWCFXS3Dr-wmBWw005UlaQcaW22gk8mE9d0YwauFpe0srMV6WkuoNHunkikCTDJIvkpcs0_A6Mg_osG2D4DUDMMZWwCn55PhFnCEly0UI3FapJGmUCRN_h3PFm4gWKLkm5wjLnq96sKAVOIrsCFoaYV63FslCHjTICdLBveJL6F0DqVQKpbKyFaGPJPZwqM55ZGtrlLiP9mPXJYegliarhBL-e6-g6JVXdyS54hvwZlQ2-zLGB-0ibTBno8ETosY8vyjCh3Jtgns6S3Ay4gc"
 							},
 							{
 								"key": "",
@@ -230,7 +230,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user_id\": 2,\n    \"approved\": true\n}",
+							"raw": "{\n    \"user_id\": 12,\n    \"approved\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -340,6 +340,104 @@
 								"api",
 								"v1",
 								"specialist"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Phyisican",
+			"item": [
+				{
+					"name": "Add sepcialist",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjRmZjg3ZDAxOGRmYTMyNWEwYjg2NmRiOTEwNDk5Y2FiMmM4ZDE1Yzk2MTUyM2NkMDRmZTJkMzFlNzlhY2U1ZTc0NGNlNTJmMGU2YmY3NTgiLCJpYXQiOjE2MDYwOTUwMzcsIm5iZiI6MTYwNjA5NTAzNywiZXhwIjoxNjM3NjMxMDM3LCJzdWIiOiIxMiIsInNjb3BlcyI6WyJwaHlzaWNpYW4iXX0.NdB9870l3AyUWSptNvSZPBmut_EAXxbjJFtVtWu1Edh4f9oKA6QyMtOxJhFU1Ijv10LA3ZlTevgzFd89VtuMy9asy5x3sEzw6_jY_jGWCMXbdZIDxdJUey1jYCdSFQASWooV6NAEpfGO4Lp1Feq81WQNmlb59EA1tCtsBFxAhyKst_NrtOSBbRu5iFVwlOH9SlNWyhf8O5HnyCX6k-VdjubMxIRK09i95zIhzBncpQ7eHu151lmNajdDul6oJoN-2wdYUGdu5XIQwXXa4aDzscUBUZlGUmpwwjb4LZ5BnnaMhVK9snyIgyN5zYtaZIhw24OXXwUhXags2D5zRQ_gxgyx1lL99rabrzGmTom1vuqJyn1HIUM05XeD-MreZeA6TZ9bcf9REu_SpB3VxEUyEze8GkfFxjSNMzvSSk89_UI9P2zQcxVGbsM7FpmGc1A-Yot2swzRH2ZDLGTfwrWsH4P4YBrxoWLsJv1cqn6V_h1wSlkIpdyTrW19EG8AJP6PH-f6GzQMuYJdrCaL0u8hpCdHAOT66PVY1fgMJD69EDtlDtbr-K-ef27ilnYktclZ_hR6KOUHiQFrp61mSSwX3eJ08sVoWmNip_rfghjXy4JVdmFuviyy6fpNlPZCAFnpCauEpOU8iuR82GjDQbNKsfNGPAFcaza0ZKwMcbkNuCs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"specialist_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/physician/specialist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"physician",
+								"specialist",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove sepcialist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjRmZjg3ZDAxOGRmYTMyNWEwYjg2NmRiOTEwNDk5Y2FiMmM4ZDE1Yzk2MTUyM2NkMDRmZTJkMzFlNzlhY2U1ZTc0NGNlNTJmMGU2YmY3NTgiLCJpYXQiOjE2MDYwOTUwMzcsIm5iZiI6MTYwNjA5NTAzNywiZXhwIjoxNjM3NjMxMDM3LCJzdWIiOiIxMiIsInNjb3BlcyI6WyJwaHlzaWNpYW4iXX0.NdB9870l3AyUWSptNvSZPBmut_EAXxbjJFtVtWu1Edh4f9oKA6QyMtOxJhFU1Ijv10LA3ZlTevgzFd89VtuMy9asy5x3sEzw6_jY_jGWCMXbdZIDxdJUey1jYCdSFQASWooV6NAEpfGO4Lp1Feq81WQNmlb59EA1tCtsBFxAhyKst_NrtOSBbRu5iFVwlOH9SlNWyhf8O5HnyCX6k-VdjubMxIRK09i95zIhzBncpQ7eHu151lmNajdDul6oJoN-2wdYUGdu5XIQwXXa4aDzscUBUZlGUmpwwjb4LZ5BnnaMhVK9snyIgyN5zYtaZIhw24OXXwUhXags2D5zRQ_gxgyx1lL99rabrzGmTom1vuqJyn1HIUM05XeD-MreZeA6TZ9bcf9REu_SpB3VxEUyEze8GkfFxjSNMzvSSk89_UI9P2zQcxVGbsM7FpmGc1A-Yot2swzRH2ZDLGTfwrWsH4P4YBrxoWLsJv1cqn6V_h1wSlkIpdyTrW19EG8AJP6PH-f6GzQMuYJdrCaL0u8hpCdHAOT66PVY1fgMJD69EDtlDtbr-K-ef27ilnYktclZ_hR6KOUHiQFrp61mSSwX3eJ08sVoWmNip_rfghjXy4JVdmFuviyy6fpNlPZCAFnpCauEpOU8iuR82GjDQbNKsfNGPAFcaza0ZKwMcbkNuCs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"specialist_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/physician/specialist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"physician",
+								"specialist",
+								""
 							]
 						}
 					},
