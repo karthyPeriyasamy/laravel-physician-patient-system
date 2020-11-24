@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"test\",\n    \"email\": \"physician4@gmail.com\",\n    \"password\": \"12345678\",\n    \"specialists\": [1,3]\n}",
+							"raw": "{\n    \"name\": \"test\",\n    \"email\": \"physician@gmail.com\",\n    \"password\": \"12345678\",\n    \"specialists\": [1,3]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -49,7 +49,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"test\",\n    \"email\": \"test1@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"raw": "{\n    \"name\": \"Patient\",\n    \"email\": \"patient@gmail.com\",\n    \"password\": \"12345678\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"physician@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"raw": "{\n    \"email\": \"patient@gmail.com\",\n    \"password\": \"12345678\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -180,7 +180,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/users",
+							"raw": "http://127.0.0.1:8000/api/v1/admin/users",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -192,6 +192,7 @@
 							"path": [
 								"api",
 								"v1",
+								"admin",
 								"users"
 							]
 						}
@@ -220,7 +221,7 @@
 							{
 								"key": "Authorization",
 								"type": "text",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYmY1Zjc0ZmM2YjVhNDE1NDRiOTc1YzNlZDcwMTIxMTViNTU0OWE5MmU2MjYwYTk5MGZkYWM0YThkZTIyODNiNjYyYjhhYjk0YTUyMmMwYzciLCJpYXQiOjE2MDYwOTQ4NzAsIm5iZiI6MTYwNjA5NDg3MCwiZXhwIjoxNjM3NjMwODcwLCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.ofx0IiL_C1cAy1EKLA7l1dpY_FrfRC2b0Kuf8JXkHYZrDwcL3ebX4t9iJzpQ-wWAPP8f_PnR6OWO_p3_qig9IhW_vBNp9zmIMtNa8aRZzaRlwfoXHPSeUqHNOQti7BcOe3JEhgN5zvtmmNVarUBhmy3_dJHRCRlEt68PFFiXc4B9lgpw7IsSYHb6Cod3G2QfxGZd6H2G4ZQ5brb-shkUqMiyV0Csy5HdyYPSh3bOXFl_fCrSWVJ_Aof53t43pKPr-JWh_qvjdcZ8VkQuAIQd8aI2Uf8JzmOZQPtIxjFVU5Ety5XTE7ol0rPAO5XFHeAZyZAvrhf4fkyOt7a9jWDKmJk87wkYZpsxI2zCpWZUOfdf_JoEZHMm4Rj4tRogxX8Bve0hndHSTG4jPd7fM8tmjIDZWCFXS3Dr-wmBWw005UlaQcaW22gk8mE9d0YwauFpe0srMV6WkuoNHunkikCTDJIvkpcs0_A6Mg_osG2D4DUDMMZWwCn55PhFnCEly0UI3FapJGmUCRN_h3PFm4gWKLkm5wjLnq96sKAVOIrsCFoaYV63FslCHjTICdLBveJL6F0DqVQKpbKyFaGPJPZwqM55ZGtrlLiP9mPXJYegliarhBL-e6-g6JVXdyS54hvwZlQ2-zLGB-0ibTBno8ETosY8vyjCh3Jtgns6S3Ay4gc"
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYTRlMzczYTNiNGNhZDI3YzI5OWVhNjk3Y2QyOTEwMGZlNzdmNmQwNzBlNDEwMjg0YTg5YWZiNTk0ZTBhMDExNjA3MzBkNDc5NjM4YWY4NWYiLCJpYXQiOjE2MDYxODMxMzcsIm5iZiI6MTYwNjE4MzEzNywiZXhwIjoxNjM3NzE5MTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.oYHS3TDwHQqVuPlWtqsz9ljrEmqQqKtQneZGopviD_0yf679ko9-_f99aWRqCbxsv2DEaxyhCvwGQhY545lwoYgFTOnlIpmpcDf2JQNEivdtIcVW4s-3n1ONO_4bKwR0U4TYsYziWSFkJEnYFhhSx_K8igK_OWBtHjPQpfzDQ7rFSLQ-ghz_xLiyo-3LDCdNMk-E4eoIIlN4KipVjBvAC0-yRna6xFyPxtyGPEmvaHZ5JcmLeRPow3JU-YA8oarSQMNShjLcCSeOu_PqjQBxOtK51Ba5n_2tZTR5zX4o1JuOM2_foBdgIJ7aYPsSmVSJReVWOBwwvZbh6AZK1TXApLE84fA8Ge93NgvpXfuebajS8qug5BTsVQO--Om9pI-xJlXgg26CEEW_VmtPWON7MW4cr-UiG-OEkBvsRYRJdE0g7FPvTO3DgUkl52w1C0MzYFeCkAYnIXVAPMPqpLar7GdHRh89qUVgh2_oBPZEjHtZPmqTusjW2XgNO_m5hyO9EuunMJON5vm-EvP-8Jl76l5VG7SbR5RTiywNuYHSsHAW3A702mxGsMUZ0l2ygOQPDIPhfIuZl0EibhQ18j7S6hryyeTqkCsk9tsQN204ClctR8KjXnIzGajFcHVd5KJ7_ancTjVKfjhkRxTvyJlYbQw3Qg5meD90FfTkUxEw8Ow"
 							},
 							{
 								"key": "",
@@ -230,7 +231,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user_id\": 12,\n    \"approved\": true\n}",
+							"raw": "{\n    \"user_id\": 3,\n    \"approved\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -238,7 +239,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/user/approve",
+							"raw": "http://127.0.0.1:8000/api/v1/admin/approve",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -250,7 +251,7 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
+								"admin",
 								"approve"
 							]
 						}
@@ -269,7 +270,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMmNkN2YyODMxNGY0OWU1OWFkYjMwZWI2ZTI0ZjUxMjhjZjY5OTM3M2RlZjhjMDJjMjQzNGMxODQyOWYzYzk5NjhiMjRkZTYxMzRhN2MyZmEiLCJpYXQiOjE2MDU5NTM5OTAsIm5iZiI6MTYwNTk1Mzk5MCwiZXhwIjoxNjM3NDg5OTkwLCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.B4abpsiz7aS8nxp0aWyNvmQf4Yu9L7C9EwrNWGFqZdceRSLbboYauDt6KjtuCqXmYQuJut58sNS2x47AQg41aNlYRoAHiyJqvFunHlHpYJMaRbxDpqSH6klIMz7qFQL2djymnwPwo8iCsNTz1hcSs6LeKkhVaqX0RQNHZjMWBmG6N7TvAlO7c7ulB5Ti-G--pVTz-Fu5oKHjI4g2-Eal9musaJu8K8Hi2N65bQAVABNIlJ6QMh-tnygLhbrP4hFatOD3ZWTSlGIiA2bJt_7f0VxHAgHu5_SRv0clT83FatZxw_6m_Fyx7dSYGclVCAfRkEh4X8qmfrl6no9kmAFgIDhczdYgV4VE6yQQGHqAgCuboFFK-7UxxrUnm_vHBkjjiWyQneU3p1bbEAo9JUDelVkLxgoK0GHQylJ7lgkqRsU9inOnZmFsEkFuEzI-Vk-CEaEiS9Zaub1q51u5od5sFY9jTOajUGxSCwZirjD0p_e97U4BarHKPH87CGLtWhxqRDEcBpk5OURyP4sea7_X8U4svTiFzeMjpFn1XqmLpM_I6ywdoIOoqkQo2-P0Bms3GG-BIP9-sn5bDlurwpj4TNFb67eZ31ryvNwCj-E4hHY7x8pFNLzFpThno2J0sRRypCvQVeC0U9azjh3PDThRpsGfwkaDx2_VooVg9Ajh_2M",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYTRlMzczYTNiNGNhZDI3YzI5OWVhNjk3Y2QyOTEwMGZlNzdmNmQwNzBlNDEwMjg0YTg5YWZiNTk0ZTBhMDExNjA3MzBkNDc5NjM4YWY4NWYiLCJpYXQiOjE2MDYxODMxMzcsIm5iZiI6MTYwNjE4MzEzNywiZXhwIjoxNjM3NzE5MTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbImFkbWluIl19.oYHS3TDwHQqVuPlWtqsz9ljrEmqQqKtQneZGopviD_0yf679ko9-_f99aWRqCbxsv2DEaxyhCvwGQhY545lwoYgFTOnlIpmpcDf2JQNEivdtIcVW4s-3n1ONO_4bKwR0U4TYsYziWSFkJEnYFhhSx_K8igK_OWBtHjPQpfzDQ7rFSLQ-ghz_xLiyo-3LDCdNMk-E4eoIIlN4KipVjBvAC0-yRna6xFyPxtyGPEmvaHZ5JcmLeRPow3JU-YA8oarSQMNShjLcCSeOu_PqjQBxOtK51Ba5n_2tZTR5zX4o1JuOM2_foBdgIJ7aYPsSmVSJReVWOBwwvZbh6AZK1TXApLE84fA8Ge93NgvpXfuebajS8qug5BTsVQO--Om9pI-xJlXgg26CEEW_VmtPWON7MW4cr-UiG-OEkBvsRYRJdE0g7FPvTO3DgUkl52w1C0MzYFeCkAYnIXVAPMPqpLar7GdHRh89qUVgh2_oBPZEjHtZPmqTusjW2XgNO_m5hyO9EuunMJON5vm-EvP-8Jl76l5VG7SbR5RTiywNuYHSsHAW3A702mxGsMUZ0l2ygOQPDIPhfIuZl0EibhQ18j7S6hryyeTqkCsk9tsQN204ClctR8KjXnIzGajFcHVd5KJ7_ancTjVKfjhkRxTvyJlYbQw3Qg5meD90FfTkUxEw8Ow",
 								"type": "text"
 							}
 						],
@@ -283,7 +284,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/specialist",
+							"raw": "http://127.0.0.1:8000/api/v1/admin/specialist",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -295,6 +296,7 @@
 							"path": [
 								"api",
 								"v1",
+								"admin",
 								"specialist"
 							]
 						}
@@ -327,7 +329,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/specialist",
+							"raw": "http://127.0.0.1:8000/api/v1/admin/specialist",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -339,6 +341,7 @@
 							"path": [
 								"api",
 								"v1",
+								"admin",
 								"specialist"
 							]
 						}
@@ -363,13 +366,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMjRmZjg3ZDAxOGRmYTMyNWEwYjg2NmRiOTEwNDk5Y2FiMmM4ZDE1Yzk2MTUyM2NkMDRmZTJkMzFlNzlhY2U1ZTc0NGNlNTJmMGU2YmY3NTgiLCJpYXQiOjE2MDYwOTUwMzcsIm5iZiI6MTYwNjA5NTAzNywiZXhwIjoxNjM3NjMxMDM3LCJzdWIiOiIxMiIsInNjb3BlcyI6WyJwaHlzaWNpYW4iXX0.NdB9870l3AyUWSptNvSZPBmut_EAXxbjJFtVtWu1Edh4f9oKA6QyMtOxJhFU1Ijv10LA3ZlTevgzFd89VtuMy9asy5x3sEzw6_jY_jGWCMXbdZIDxdJUey1jYCdSFQASWooV6NAEpfGO4Lp1Feq81WQNmlb59EA1tCtsBFxAhyKst_NrtOSBbRu5iFVwlOH9SlNWyhf8O5HnyCX6k-VdjubMxIRK09i95zIhzBncpQ7eHu151lmNajdDul6oJoN-2wdYUGdu5XIQwXXa4aDzscUBUZlGUmpwwjb4LZ5BnnaMhVK9snyIgyN5zYtaZIhw24OXXwUhXags2D5zRQ_gxgyx1lL99rabrzGmTom1vuqJyn1HIUM05XeD-MreZeA6TZ9bcf9REu_SpB3VxEUyEze8GkfFxjSNMzvSSk89_UI9P2zQcxVGbsM7FpmGc1A-Yot2swzRH2ZDLGTfwrWsH4P4YBrxoWLsJv1cqn6V_h1wSlkIpdyTrW19EG8AJP6PH-f6GzQMuYJdrCaL0u8hpCdHAOT66PVY1fgMJD69EDtlDtbr-K-ef27ilnYktclZ_hR6KOUHiQFrp61mSSwX3eJ08sVoWmNip_rfghjXy4JVdmFuviyy6fpNlPZCAFnpCauEpOU8iuR82GjDQbNKsfNGPAFcaza0ZKwMcbkNuCs",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYmZjNTY2MmQyN2YyODQ1ZTMzMmY1N2E4YjE3YWVlNmVhMmI2MDZmZTc4MWIyOTcwOWE3N2M4YzRmZDIyMmNhNGUxODdlMTkxMDE0NDQ5ODUiLCJpYXQiOjE2MDYxODMzNjUsIm5iZiI6MTYwNjE4MzM2NSwiZXhwIjoxNjM3NzE5MzY1LCJzdWIiOiIyIiwic2NvcGVzIjpbInBoeXNpY2lhbiJdfQ.STlm76Mdlfl7y9iNQv3a5gX1c9CfcUEGOEixH1tFav85Yofmnf98JUloutEXpTYVptG4Dt3UojHs2nMoOAMhm3AMSLP8kzP53nRTRK4w4fdxU2zDUj7gZaAIG1f047lM2ZmOnljRbZifr0nk_A9eVne2o8qI6TBVuEq1c3mCQa0ONSXT21jg5vEaixlqlDvCeHIS6lOIhENVI-3IkCqCdpUQ2tFijZsS_aQ_YlwT0hrojG0Ke673so26e03aALI4l2h58F6TVY477EHfx8RQvfmQDZELCtxg4uuXgOrsfwI3D_EaPiRcf30YUHLaHw6aOqp5Shs678nwy3Z53IVwk-w-u9fIxWLGYTV6qgpgC86LvOnOu_F83l0HBfMhvWwc6FuRdhDeX6YTzDTIvBI47YSxOgjy4y_vvbuWCZvmXdl6yEov-8lKQoSiCiEvKgN_uoYHm6YINSueBciZU9heyuHndVSDWkvOP7USBF2cPrWSwOboM62ZLZly7rY5MZ60LIsyfX0KJqVm76cOOqEybqXxP4hqKaVH6AdLRYygj64waboV2SWSOQMZsberJ8h83PnjgQ59c5vLbkiA9tsaQFFf9cMptKT8_oC1kHDqIUyXCKIyNclh2MBZOHFmWhSbj6dtk41IA4cPQIt4Cqs2LrDB6KeoeiEFNPonRaP2Yrc",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"specialist_id\": 3\n}",
+							"raw": "{\n    \"specialist_id\": 7\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -438,6 +441,195 @@
 								"physician",
 								"specialist",
 								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Create Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTdlMTRhODA4YzFlMzQwNTkyZDYyZTMzZGJkYmUxMzdkMDg1ZDcyNDk1YTA4MTJjMmQ2YzhjMTFmZTUwODViZWZhN2VhOWE3Y2Y3ZWIzMzYiLCJpYXQiOjE2MDYxODc4MzEsIm5iZiI6MTYwNjE4NzgzMSwiZXhwIjoxNjM3NzIzODMxLCJzdWIiOiIzIiwic2NvcGVzIjpbInVzZXIiXX0.xlWmaBOF7zgvN67CUkgLbpzBM0sQ1cymsFIuBVnS-D0yys8nh6xEKn9sfkxo0NqJ7lMQauUxg2sVBbWoaHc5rmqaC0i8RhJB0ysfdPjNhi8zbAUV0Qxbu5aESm24KjvHUkYzdxLPOx6ZvQe-R2-7X5VYHPFrqUD5tIwzf8RPU8Hl2OCJbQp2H2AkefXi6yAiGlCyC9qYWRHLu1MlwfAmASsr9uH9XeVv6WZcZky1CmZ3lO55ANcsj9wzgt91o9vD6URAVnGhDgNxMr0oKI9woAhNtpKPPog0-4GB1QUlwLBjg4u35M66Bhe2e06XNwJx4a6vQ_4hYvWAp_Wha0cKA-FYOeUNEXXWs5qFetOor8sLOtJ4NyI6w7mXvkgU2nsXR350YKCuNxtYwa_4O7tyCEv9LrwZVgZld2F_z2lX6XIRfNaibIV_VrwEtvRRdzKnxOV47IyEP2HaXTU-OHIeiXlWsAn0nnGkiqN0XC8wDbBYH9PYvXS-xrqAaM6DjJTpBx_NU8d72DEvXavS9FLZaya5L6TAw4gvtNlGSjj_tFCqLcbcZKLJAFWKAG45TxiC7DfB7Zn0QJskE3UmxTByhUuVoMp5G637Ad1H6YAtBL169o5X3Ddm8flMOhmOeun7pniFGQTeKs3O7B0kMBfjjLQFivCK9tWWxGS_VZps9Zw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Appointment1\",\n    \"specialist_id\": 1,\n    \"description\": \"Feeling not well\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/patient/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTdlMTRhODA4YzFlMzQwNTkyZDYyZTMzZGJkYmUxMzdkMDg1ZDcyNDk1YTA4MTJjMmQ2YzhjMTFmZTUwODViZWZhN2VhOWE3Y2Y3ZWIzMzYiLCJpYXQiOjE2MDYxODc4MzEsIm5iZiI6MTYwNjE4NzgzMSwiZXhwIjoxNjM3NzIzODMxLCJzdWIiOiIzIiwic2NvcGVzIjpbInVzZXIiXX0.xlWmaBOF7zgvN67CUkgLbpzBM0sQ1cymsFIuBVnS-D0yys8nh6xEKn9sfkxo0NqJ7lMQauUxg2sVBbWoaHc5rmqaC0i8RhJB0ysfdPjNhi8zbAUV0Qxbu5aESm24KjvHUkYzdxLPOx6ZvQe-R2-7X5VYHPFrqUD5tIwzf8RPU8Hl2OCJbQp2H2AkefXi6yAiGlCyC9qYWRHLu1MlwfAmASsr9uH9XeVv6WZcZky1CmZ3lO55ANcsj9wzgt91o9vD6URAVnGhDgNxMr0oKI9woAhNtpKPPog0-4GB1QUlwLBjg4u35M66Bhe2e06XNwJx4a6vQ_4hYvWAp_Wha0cKA-FYOeUNEXXWs5qFetOor8sLOtJ4NyI6w7mXvkgU2nsXR350YKCuNxtYwa_4O7tyCEv9LrwZVgZld2F_z2lX6XIRfNaibIV_VrwEtvRRdzKnxOV47IyEP2HaXTU-OHIeiXlWsAn0nnGkiqN0XC8wDbBYH9PYvXS-xrqAaM6DjJTpBx_NU8d72DEvXavS9FLZaya5L6TAw4gvtNlGSjj_tFCqLcbcZKLJAFWKAG45TxiC7DfB7Zn0QJskE3UmxTByhUuVoMp5G637Ad1H6YAtBL169o5X3Ddm8flMOhmOeun7pniFGQTeKs3O7B0kMBfjjLQFivCK9tWWxGS_VZps9Zw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Appointment1\",\n    \"specialist_id\": 1,\n    \"description\": \"Feeling not well\",\n    \"appointment_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/patient/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTdlMTRhODA4YzFlMzQwNTkyZDYyZTMzZGJkYmUxMzdkMDg1ZDcyNDk1YTA4MTJjMmQ2YzhjMTFmZTUwODViZWZhN2VhOWE3Y2Y3ZWIzMzYiLCJpYXQiOjE2MDYxODc4MzEsIm5iZiI6MTYwNjE4NzgzMSwiZXhwIjoxNjM3NzIzODMxLCJzdWIiOiIzIiwic2NvcGVzIjpbInVzZXIiXX0.xlWmaBOF7zgvN67CUkgLbpzBM0sQ1cymsFIuBVnS-D0yys8nh6xEKn9sfkxo0NqJ7lMQauUxg2sVBbWoaHc5rmqaC0i8RhJB0ysfdPjNhi8zbAUV0Qxbu5aESm24KjvHUkYzdxLPOx6ZvQe-R2-7X5VYHPFrqUD5tIwzf8RPU8Hl2OCJbQp2H2AkefXi6yAiGlCyC9qYWRHLu1MlwfAmASsr9uH9XeVv6WZcZky1CmZ3lO55ANcsj9wzgt91o9vD6URAVnGhDgNxMr0oKI9woAhNtpKPPog0-4GB1QUlwLBjg4u35M66Bhe2e06XNwJx4a6vQ_4hYvWAp_Wha0cKA-FYOeUNEXXWs5qFetOor8sLOtJ4NyI6w7mXvkgU2nsXR350YKCuNxtYwa_4O7tyCEv9LrwZVgZld2F_z2lX6XIRfNaibIV_VrwEtvRRdzKnxOV47IyEP2HaXTU-OHIeiXlWsAn0nnGkiqN0XC8wDbBYH9PYvXS-xrqAaM6DjJTpBx_NU8d72DEvXavS9FLZaya5L6TAw4gvtNlGSjj_tFCqLcbcZKLJAFWKAG45TxiC7DfB7Zn0QJskE3UmxTByhUuVoMp5G637Ad1H6YAtBL169o5X3Ddm8flMOhmOeun7pniFGQTeKs3O7B0kMBfjjLQFivCK9tWWxGS_VZps9Zw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appointment_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/patient/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Appointments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTdlMTRhODA4YzFlMzQwNTkyZDYyZTMzZGJkYmUxMzdkMDg1ZDcyNDk1YTA4MTJjMmQ2YzhjMTFmZTUwODViZWZhN2VhOWE3Y2Y3ZWIzMzYiLCJpYXQiOjE2MDYxODc4MzEsIm5iZiI6MTYwNjE4NzgzMSwiZXhwIjoxNjM3NzIzODMxLCJzdWIiOiIzIiwic2NvcGVzIjpbInVzZXIiXX0.xlWmaBOF7zgvN67CUkgLbpzBM0sQ1cymsFIuBVnS-D0yys8nh6xEKn9sfkxo0NqJ7lMQauUxg2sVBbWoaHc5rmqaC0i8RhJB0ysfdPjNhi8zbAUV0Qxbu5aESm24KjvHUkYzdxLPOx6ZvQe-R2-7X5VYHPFrqUD5tIwzf8RPU8Hl2OCJbQp2H2AkefXi6yAiGlCyC9qYWRHLu1MlwfAmASsr9uH9XeVv6WZcZky1CmZ3lO55ANcsj9wzgt91o9vD6URAVnGhDgNxMr0oKI9woAhNtpKPPog0-4GB1QUlwLBjg4u35M66Bhe2e06XNwJx4a6vQ_4hYvWAp_Wha0cKA-FYOeUNEXXWs5qFetOor8sLOtJ4NyI6w7mXvkgU2nsXR350YKCuNxtYwa_4O7tyCEv9LrwZVgZld2F_z2lX6XIRfNaibIV_VrwEtvRRdzKnxOV47IyEP2HaXTU-OHIeiXlWsAn0nnGkiqN0XC8wDbBYH9PYvXS-xrqAaM6DjJTpBx_NU8d72DEvXavS9FLZaya5L6TAw4gvtNlGSjj_tFCqLcbcZKLJAFWKAG45TxiC7DfB7Zn0QJskE3UmxTByhUuVoMp5G637Ad1H6YAtBL169o5X3Ddm8flMOhmOeun7pniFGQTeKs3O7B0kMBfjjLQFivCK9tWWxGS_VZps9Zw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/patient/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"patient",
+								"appointment"
 							]
 						}
 					},
