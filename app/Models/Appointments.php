@@ -16,7 +16,7 @@ class Appointments extends Model
     * @var array
     */
     protected $fillable = [
-        'user_id', 'specialist_id', 'description', 'status'
+        'title', 'user_id', 'specialist_id', 'description', 'status'
     ];
 
     /**

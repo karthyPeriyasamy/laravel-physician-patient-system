@@ -29,6 +29,13 @@ return [
                 'update' => 'Specialists updated failure!',
                 'exists' => 'Specialist already exists',
                 'not_exists' => 'Specialist not exists'
+           ],
+           'appointments' => [
+                'validation' => 'Appointments required params validation error',
+                'create' => 'Appointments created failure!',
+                'update' => 'Appointments updated failure!',
+                'delete' => 'Appointments deleted failure',
+                'not_exists' => 'Specialist not exists'
             ]
        ],
        'success' => [
@@ -49,7 +56,13 @@ return [
                 'create' => 'Specialists created successfully!',
                 'update' => 'Specialists updated successfully!',
                 'get_all' => 'Retrieved all specialists'
-           ]
+           ],
+           'appointments' => [
+                'create' => 'Appointments created successfully!',
+                'update' => 'Appointments updated successfully!',
+                'delete' => 'Appointments deleted successfully!',
+                'get_all' => 'Retrieved all appointments'
+            ]
        ]
    ]
 ];

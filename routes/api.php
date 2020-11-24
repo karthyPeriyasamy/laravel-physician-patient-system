@@ -6,6 +6,7 @@ use App\Http\Controllers\API\SpecialistController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LoginController;
 use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\AppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +34,10 @@ Route::group(['prefix' => 'v1'], function () {
     });
     Route::middleware(['auth:api', 'role'])->group(function () {
         Route::middleware(['scope:admin'])->group(function () {
-            Route::post('specialist', [SpecialistController::class, 'create']);
-            Route::put('specialist', [SpecialistController::class, 'update']);
-            Route::get('users', [UserController::class, 'index']);
-            Route::group(['prefix' => 'user'], function () {
+            Route::group(['prefix' => 'admin'], function () {
+                Route::post('specialist', [SpecialistController::class, 'create']);
+                Route::put('specialist', [SpecialistController::class, 'update']);
+                Route::get('users', [UserController::class, 'index']);
                 Route::put('approve', [UserController::class, 'approved']);
             });
         });
@@ -45,6 +46,14 @@ Route::group(['prefix' => 'v1'], function () {
             Route::group(['prefix' => 'physician'], function () {
                 Route::put('specialist', [SpecialistController::class, 'addToPhysician']);
                 Route::delete('specialist', [SpecialistController::class, 'removeFromPhysician']);
+            });
+        });
+        Route::middleware(['scope:user'])->group(function () {
+            Route::group(['prefix' => 'patient'], function () {
+                Route::get('appointment', [AppointmentController::class, 'patientAppointments']);
+                Route::post('appointment', [AppointmentController::class, 'create']);
+                Route::put('appointment', [AppointmentController::class, 'update']);
+                Route::delete('appointment', [AppointmentController::class, 'delete']);
             });
         });
     });
