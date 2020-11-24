@@ -53,17 +53,21 @@ class RegisterController extends BaseController
     {
         $validator = $this->validator($request->all());
         if ($validator->fails()) {
-            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors());
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors(), 422);
         }
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'address' => $request->address,
-            'password' => Hash::make($request->password),
-        ]);
-        $success['token'] =  $user->createToken(Config::get('constants.api.secret'), ['user']);
-        $success['name'] =  $user->name;
-        return $this->successResponse($success, Config::get('constants.api.success.register.create'));
+        try {
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'address' => $request->address,
+                'password' => Hash::make($request->password),
+            ]);
+            $success['token'] =  $user->createToken(Config::get('constants.api.secret'), ['user']);
+            $success['name'] =  $user->name;
+            return $this->successResponse($success, Config::get('constants.api.success.register.create'));
+        } catch (\Exception $error) {
+            return $this->exceptionResponse(Config::get('constants.api.exception'), $error->getMessage());
+        }
     }
 
     /**
@@ -76,22 +80,26 @@ class RegisterController extends BaseController
     {
         $validator = $this->physicianValidator($request->all());
         if ($validator->fails()) {
-            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors());
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $validator->errors(), 422);
         }
         $specialists = Specialists::whereIn('id', $request->specialists);
         if ($specialists->count() !== count($request->specialists)) {
-            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $specialists);
+            return $this->errorResponse(Config::get('constants.api.error.register.validation'), $specialists, 422);
         }
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'address' => $request->address,
-            'is_physician' => 1,
-            'password' => Hash::make($request->password),
-        ]);
-        $user->specialists()->attach($request->specialists);
-        $success['token'] =  $user->createToken(Config::get('constants.api.secret'), ['physician']);
-        $success['name'] =  $user->name;
-        return $this->successResponse($success, Config::get('constants.api.success.register.create'));
+        try {
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'address' => $request->address,
+                'is_physician' => 1,
+                'password' => Hash::make($request->password),
+            ]);
+            $user->specialists()->attach($request->specialists);
+            $success['token'] =  $user->createToken(Config::get('constants.api.secret'), ['physician']);
+            $success['name'] =  $user->name;
+            return $this->successResponse($success, Config::get('constants.api.success.register.create'));
+        } catch (\Exception $error) {
+            return $this->exceptionResponse(Config::get('constants.api.exception'), $error->getMessage());
+        }
     }
 }

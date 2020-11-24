@@ -36,4 +36,21 @@ class BaseController extends Controller
         }
         return response()->json($response, $code);
     }
+
+     /**
+     * Error Response
+     *
+     * @param  mixed $error
+     * @param  mixed $errorMessages
+     * @param  number $code
+     * @return Response
+     */
+    public function exceptionResponse($error, $errorMessages = [], $code = 500)
+    {
+        $response = [ 'success' => false, 'message' => $error];
+        if (!empty($errorMessages)) {
+            $response['data'] = $errorMessages;
+        }
+        return response()->json($response, $code);
+    }
 }

@@ -26,7 +26,7 @@ class AppointmentsController extends Controller
     {
         return Appointments::create([
             'user_id' => $data['user_id'],
-            'specialist' => $data['specialist'],
+            'specialist_id' => $data['specialist'],
             'description' => $data['description'],
         ]);
     }

@@ -10,6 +10,7 @@ return [
        'date_format' => 'd/m/Y',
        'page_not_found' => 'Page not found',
        'no_data_found' => 'No data found',
+       'exception' => 'Something went wrong',
        'error' => [
            'login' => [
                 'validation' => 'Login validation error.',

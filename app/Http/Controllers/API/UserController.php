@@ -20,11 +20,15 @@ class UserController extends BaseController
      */
     public function index()
     {
-        $users = User::where('is_admin', 0)->orderBy('created_at', 'desc')->get();
-        if ($users->count() === 0) {
-            return $this->successResponse(UsersResource::collection($users), Config::get('constants.api.no_data_found'));
+        try {
+            $users = User::where('is_admin', 0)->orderBy('created_at', 'desc')->get();
+            if ($users->count() === 0) {
+                return $this->errorResponse(UsersResource::collection($users), Config::get('constants.api.no_data_found'));
+            }
+            return $this->successResponse(UsersResource::collection($users), Config::get('constants.api.success.user.get_all'));
+        } catch (\Exception $error) {
+            return $this->exceptionResponse(Config::get('constants.api.exception'), $error->getMessage());
         }
-        return $this->successResponse(UsersResource::collection($users), Config::get('constants.api.success.user.get_all'));
     }
 
     public function approved(Request $request)
@@ -35,15 +39,17 @@ class UserController extends BaseController
         ]);
 
         if ($validator->fails()) {
-            return $this->errorResponse(Config::get('constants.api.error.user.approved_validation'), $validator->errors());
+            return $this->errorResponse(Config::get('constants.api.error.user.approved_validation'), $validator->errors(), 422);
         }
-        $approved = $request->approved ? 1 : 0;
-        $user = User::where('id', $request->user_id)
-        ->where('is_admin', 0)
-        ->update(['approved' => $approved]);
-        if (!$user) {
-            return $this->errorResponse(Config::get('constants.api.error.user.approved'));
+        try {
+            $approved = $request->approved ? 1 : 0;
+            $user = User::where('id', $request->user_id)->where('is_admin', 0)->update(['approved' => $approved]);
+            if (!$user) {
+                return $this->errorResponse(Config::get('constants.api.error.user.approved'));
+            }
+            return $this->successResponse($user, Config::get('constants.api.success.user.approved'));
+        } catch (\Exception $error) {
+            return $this->exceptionResponse(Config::get('constants.api.exception'), $error->getMessage());
         }
-        return $this->successResponse($user, Config::get('constants.api.success.user.approved'));
     }
 }

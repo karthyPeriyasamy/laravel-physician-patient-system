@@ -15,8 +15,10 @@ class CreateAppointmentsTable extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->string('specialist');
+            $table->bigInteger('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->bigInteger('specialist_id')->unsigned()->index();
+            $table->foreign('specialist_id')->references('id')->on('specialists')->onDelete('cascade');
             $table->string('description');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

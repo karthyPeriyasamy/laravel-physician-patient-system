@@ -17,19 +17,19 @@ class CreateAppointmentSeeder extends Seeder
         $appointments = [
             [
                'user_id'=>1,
-               'specialist'=>1,
+               'specialist_id'=>1,
                'description' => 'Health checkup 1 time',
                'status'=> 1,
             ],
             [
                 'user_id'=>1,
-                'specialist'=>2,
+                'specialist_id'=>2,
                 'description' => 'Health checkup 2 time',
                 'status'=> 1,
             ],
              [
                 'user_id'=>1,
-                'specialist'=>1,
+                'specialist_id'=>1,
                 'description' => 'Health checkup 3 time',
                 'status'=> 1,
              ]
