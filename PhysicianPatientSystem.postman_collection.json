@@ -445,6 +445,99 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET Appointments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWI0OThmOTcxYTcwYjk0OTkwYWY0MDZmOTJhZTk4OGE0MDcyYTk4NWRkODI5OThiNjg1OGVhNjg3Yjk0OTViNjU3NTUxMDVkNDUxMjU1NTYiLCJpYXQiOjE2MDYyNzUxMjksIm5iZiI6MTYwNjI3NTEyOSwiZXhwIjoxNjM3ODExMTI5LCJzdWIiOiIyIiwic2NvcGVzIjpbInBoeXNpY2lhbiJdfQ.uGymeT3h85BLnxjAWomsvZlq2TUHRmiJppLUn4UztSznLpLCi6due1wTP6hCaR2yCldcKv03xQjV4RbVTz4IbmzCUljedKDTBWHNC9lfv7erFXN5z53b-7cWUXg-DQ1_5Sop-5z30P9plID9SdcyIklDnHVd8nTi8ziqvh_o5Mp0awoVpqzXzSctatJJ3PDmZ4VDGBLf_x3RT9uCgJokGxSunKiWp1myXJR3FmTEYyNUElP_ntoZ_PRynAjlnMXmRkDv6agd7DOPohhegDi58HEtQuZdYLa8eUr3d6MJHLHooIKNfsjIErB6nQK9JZPhUuI7rkCLLtf2XdqlA93nO5n9fpMXmHRAde6ztEIbGVXBEj-9irvzrkv3nIxKy9lPGX6SIRisgc-DjYGmihtvWkwTRDRiV-9JE06319motg0MnJ34pw9gXQYz3Noc7hlS8gfziaTiGCGKRFg7oxdSkjLAz6Yb5RMHv70qMPTcuCfivnPSXNYBEuVE9EFZdMpNlTMwuPL7VEgngtZHsI7sUI3xGVp0PelzFdGhMM37XKsCwbM8wAlzN_vxOPf3XQlkNueQ68yEF4k9qlYIPGLim_ONpxEaHAqX8n3LD0GvtzlcOyvsOnFUzzFMgfNLDk7Orxtj0Bguj7sEv1ZHE3Uxi0XiUfe049SkednMaNckyqk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/physician/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"physician",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTdlMTRhODA4YzFlMzQwNTkyZDYyZTMzZGJkYmUxMzdkMDg1ZDcyNDk1YTA4MTJjMmQ2YzhjMTFmZTUwODViZWZhN2VhOWE3Y2Y3ZWIzMzYiLCJpYXQiOjE2MDYxODc4MzEsIm5iZiI6MTYwNjE4NzgzMSwiZXhwIjoxNjM3NzIzODMxLCJzdWIiOiIzIiwic2NvcGVzIjpbInVzZXIiXX0.xlWmaBOF7zgvN67CUkgLbpzBM0sQ1cymsFIuBVnS-D0yys8nh6xEKn9sfkxo0NqJ7lMQauUxg2sVBbWoaHc5rmqaC0i8RhJB0ysfdPjNhi8zbAUV0Qxbu5aESm24KjvHUkYzdxLPOx6ZvQe-R2-7X5VYHPFrqUD5tIwzf8RPU8Hl2OCJbQp2H2AkefXi6yAiGlCyC9qYWRHLu1MlwfAmASsr9uH9XeVv6WZcZky1CmZ3lO55ANcsj9wzgt91o9vD6URAVnGhDgNxMr0oKI9woAhNtpKPPog0-4GB1QUlwLBjg4u35M66Bhe2e06XNwJx4a6vQ_4hYvWAp_Wha0cKA-FYOeUNEXXWs5qFetOor8sLOtJ4NyI6w7mXvkgU2nsXR350YKCuNxtYwa_4O7tyCEv9LrwZVgZld2F_z2lX6XIRfNaibIV_VrwEtvRRdzKnxOV47IyEP2HaXTU-OHIeiXlWsAn0nnGkiqN0XC8wDbBYH9PYvXS-xrqAaM6DjJTpBx_NU8d72DEvXavS9FLZaya5L6TAw4gvtNlGSjj_tFCqLcbcZKLJAFWKAG45TxiC7DfB7Zn0QJskE3UmxTByhUuVoMp5G637Ad1H6YAtBL169o5X3Ddm8flMOhmOeun7pniFGQTeKs3O7B0kMBfjjLQFivCK9tWWxGS_VZps9Zw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appointment_id\": 2,\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/appointment/status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"status"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -470,7 +563,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Appointment1\",\n    \"specialist_id\": 1,\n    \"description\": \"Feeling not well\"\n}",
+							"raw": "{\n    \n    \"title\": \"Appointment1\",\n    \"specialist_id\": 1,\n    \"description\": \"Feeling not well\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
