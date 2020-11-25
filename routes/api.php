@@ -46,6 +46,8 @@ Route::group(['prefix' => 'v1'], function () {
             Route::group(['prefix' => 'physician'], function () {
                 Route::put('specialist', [SpecialistController::class, 'addToPhysician']);
                 Route::delete('specialist', [SpecialistController::class, 'removeFromPhysician']);
+                Route::get('appointment', [AppointmentController::class, 'physicianAppointments']);
+                Route::put('appointment', [AppointmentController::class, 'updateStatus']);
             });
         });
         Route::middleware(['scope:user'])->group(function () {
@@ -54,6 +56,11 @@ Route::group(['prefix' => 'v1'], function () {
                 Route::post('appointment', [AppointmentController::class, 'create']);
                 Route::put('appointment', [AppointmentController::class, 'update']);
                 Route::delete('appointment', [AppointmentController::class, 'delete']);
+            });
+        });
+        Route::middleware(['scope:user,physician'])->group(function () {
+            Route::group(['prefix' => 'appointment'], function () {
+                Route::get('details', [AppointmentController::class, 'getAppointment']);
             });
         });
     });

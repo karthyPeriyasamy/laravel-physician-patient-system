@@ -61,7 +61,8 @@ return [
                 'create' => 'Appointments created successfully!',
                 'update' => 'Appointments updated successfully!',
                 'delete' => 'Appointments deleted successfully!',
-                'get_all' => 'Retrieved all appointments'
+                'get_all' => 'Retrieved all appointments.',
+                'get' => 'Retrieved a appointment details.'
             ]
        ]
    ]
